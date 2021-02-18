@@ -1,4 +1,3 @@
-# A simple program to calculate your zodiac symbol.
 from colorama import init
 from termcolor import cprint
 import zodiac
