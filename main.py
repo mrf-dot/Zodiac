@@ -1,10 +1,12 @@
 from colorama import init
 from termcolor import cprint
 import zodiac
+import misc
 
 init()
 
 def main():
+    misc.clear()
     print("""What zodiac system would you like to use?
         Western
         Hindu

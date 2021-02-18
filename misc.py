@@ -1,4 +1,14 @@
+import os
 from prettytable import PrettyTable
+
+
+def clear():
+    """Clears the console
+
+    """
+    os.system('cls') if os.name == 'nt' else os.system('clear')
+
+
 def to_int(message: str, *valids) -> int:
     """Turns input into a valid integer
 
@@ -10,6 +20,8 @@ def to_int(message: str, *valids) -> int:
         if valids:
             if answer not in valids: continue
         return answer
+
+
 def table_dict(head1, head2, cases: dict):
     """Formats a dictionary as a table
 
