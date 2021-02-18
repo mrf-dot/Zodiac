@@ -1,9 +1,9 @@
+# A simple program to calculate your zodiac symbol.
 from colorama import init
 from termcolor import cprint
 import zodiac
 
 init()
-
 
 def main():
     print("""What zodiac system would you like to use?
