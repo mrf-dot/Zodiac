@@ -9,10 +9,7 @@ def main():
     misc.clear()
     print("""What zodiac system would you like to use?
         Western
-        Hindu
-        Chinese
-        Egyptian
-        Celtic""")
+        Chinese""")
     while True:
         system = input("Enter the name of the system: ").lower()
         default = lambda: cprint(f"\"{system}\" is not a valid command.", "red")

@@ -14,12 +14,22 @@ class zodiac_keys:
         10: ["October 30 - November 23", "Libra"],
         11: ["November 23 - 29", "Scorpio"],
         12: ["November 29 - December 17", "Ophiuchus"],
-        13: ["December 17 - January 20", "Sagittarius"],
+        13: ["December 17 - January 20", "Sagittarius"]
     }
-    hindu = {} 
-    chinese = {}
-    egyptian = {}
-    celtic = {}
+    chinese = {
+        4: "Rat",
+        5: "Ox",
+        6: "Tiger",
+        7: "Rabbit",
+        8: "Dragon",
+        9: "Snake",
+        10: "Horse",
+        11: "Goat",
+        12: "Monkey",
+        1: "Rooster",
+        2: "Dog",
+        3: "Pig"
+    }
 
 
 class astrology_systems:
@@ -28,17 +38,14 @@ class astrology_systems:
     """
     def western(self):
         misc.table_dict("Input", "When you were born",zodiac_keys.western)
-        selection = misc.to_int("When were you born (Input): ", *range(1,14))
-        misc.fetch_sign(selection, zodiac_keys.western)
+        selection = misc.to_int("When were you born (Input)?: ", *range(1,14))
+        print(f"Your astrological sign is {zodiac_keys.western[selection][1]}.")
 
-    def hindu(self):
-        pass
 
     def chinese(self):
-        pass
+        birth_year = misc.to_int("What year were you born?: ") % 12
+        print(f"Your astrological sign is {zodiac_keys.chinese[birth_year]}.")
 
-    def egyptian(self):
-        pass
 
-    def celtic(self):
-        pass
+
+
