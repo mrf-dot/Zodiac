@@ -1,12 +1,8 @@
 import os
 from prettytable import PrettyTable
 
-
-def clear():
-    """Clears the console
-
-    """
-    os.system('cls') if os.name == 'nt' else os.system('clear')
+clear = lambda: os.system("cls" if os.name == "nt" else "clear")
+fetch_sign = lambda selection, key: print(f"Your astrological sign is {key[selection][1]}.")
 
 
 def to_int(message: str, *valids) -> int:
@@ -17,9 +13,8 @@ def to_int(message: str, *valids) -> int:
         answer = input(message)
         try: answer = int(answer)
         except: continue
-        if valids:
-            if answer not in valids: continue
-        return answer
+        if valids and answer not in valids: continue
+        else: return answer
 
 
 def table_dict(head1, head2, cases: dict):
@@ -31,4 +26,3 @@ def table_dict(head1, head2, cases: dict):
     for x in cases:
         table.add_row([x, cases[x][0]])
     print(table)
-
